@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script type="module" src="js/app.js" defer></script>
+		<link rel="stylesheet" href="css/index.css" />
+		<title>GeoMen</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="title">GeoMen</h1>
+			<div class="mainInfo">
+				<div class="visualization">
+                    <p id="areaTag"></p>
+					<canvas id="canvas"></canvas>
+				</div>
+				<div class="inputGroup">
+					<h2 class="subtitle">Gerador de quadrados</h2>
+					<input
+                        id="largura"
+						class="numberField"
+						type="number"
+						placeholder="Largura"
+						min="1"
+                        max="30"
+                        oninput="javascript: 
+                        if (parseInt(this.value) > parseInt(this.max)) this.value = 30
+                        else if (parseInt(this.value) < parseInt(this.min)) this.value = 1
+                        "
+					/>
+					<input
+                        id="altura"
+						class="numberField"
+						type="number"
+						placeholder="Altura"
+						min="1"
+                        max="30"
+                        oninput="javascript: 
+                        if (parseInt(this.value) > parseInt(this.max)) this.value = 30
+                        else if (parseInt(this.value) < parseInt(this.min)) this.value = 1
+                        "
+					/>
+					<button id="generateButton" class="button">Gerar</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
