@@ -3,8 +3,8 @@ import Rectangle from "./classes/rectangle.js";
 document.getElementById("generateButton").addEventListener("click", generateSquare)
 
 function generateSquare(){
-    const largura = parseInt(document.getElementById("largura").value);
-    const altura = parseInt(document.getElementById("altura").value);
+    const largura = parseInt(document.getElementById("width").value);
+    const altura = parseInt(document.getElementById("height").value);
 
     if(isNaN(largura) || isNaN(altura)) return;
 
@@ -12,7 +12,7 @@ function generateSquare(){
     rectangle.draw();
 
     const areaTag = document.getElementById("areaTag")
-    areaTag.innerHTML = "Área = " + rectangle.getArea();
+    areaTag.innerHTML = "Area = " + rectangle.getArea();
 }
 
 /*

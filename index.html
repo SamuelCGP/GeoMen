@@ -12,36 +12,36 @@
 			<h1 class="title">GeoMen</h1>
 			<div class="mainInfo">
 				<div class="visualization">
-                    <p id="areaTag"></p>
+					<p id="areaTag"></p>
 					<canvas id="canvas"></canvas>
 				</div>
 				<div class="inputGroup">
-					<h2 class="subtitle">Gerador de quadrados</h2>
+					<h2 class="subtitle">Rectangle Generator</h2>
 					<input
-                        id="largura"
+						id="width"
 						class="numberField"
 						type="number"
-						placeholder="Largura"
+						placeholder="Width"
 						min="1"
-                        max="30"
-                        oninput="javascript: 
+						max="30"
+						oninput="javascript: 
                         if (parseInt(this.value) > parseInt(this.max)) this.value = 30
                         else if (parseInt(this.value) < parseInt(this.min)) this.value = 1
                         "
 					/>
 					<input
-                        id="altura"
+						id="height"
 						class="numberField"
 						type="number"
-						placeholder="Altura"
+						placeholder="Height"
 						min="1"
-                        max="30"
-                        oninput="javascript: 
+						max="30"
+						oninput="javascript: 
                         if (parseInt(this.value) > parseInt(this.max)) this.value = 30
                         else if (parseInt(this.value) < parseInt(this.min)) this.value = 1
                         "
 					/>
-					<button id="generateButton" class="button">Gerar</button>
+					<button id="generateButton" class="button">Generate</button>
 				</div>
 			</div>
 		</div>
