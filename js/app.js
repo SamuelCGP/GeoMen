@@ -3,16 +3,19 @@ import Rectangle from "./classes/rectangle.js";
 document.getElementById("generateButton").addEventListener("click", generateSquare)
 
 function generateSquare(){
-    const largura = parseInt(document.getElementById("width").value);
-    const altura = parseInt(document.getElementById("height").value);
+    var largura = parseFloat(document.getElementById("width").value);
+    var altura = parseFloat(document.getElementById("height").value);
 
     if(isNaN(largura) || isNaN(altura)) return;
 
-    const rectangle = new Rectangle(largura, altura);
-    rectangle.draw();
-
     const areaTag = document.getElementById("areaTag")
-    areaTag.innerHTML = "Area = " + rectangle.getArea();
+	const rectangle = new Rectangle(largura, altura);
+    areaTag.innerHTML = "Area = " + Math.round(rectangle.getArea());
+
+	if (largura > altura && largura > 30) altura = (30*altura)/largura
+	else if (altura > largura && altura > 30) largura = (30*largura)/altura
+	const drawRectangle = new Rectangle(largura, altura)
+    drawRectangle.draw();
 }
 
 /*

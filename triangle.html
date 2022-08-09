@@ -4,14 +4,14 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<script type="module" src="js/app.js" defer></script>
-		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/triangle.css" />
 		<title>GeoMen</title>
 	</head>
 	<body>
 		<div class="container">
 			<div class="top">
 				<h1 class="title">GeoMen</h1>
-				<button class="button" id="topButton" onclick="window.location.href='triangle.html'">Triângulo</button>
+				<button class="button" id="topButton" onclick="window.location.href='index.html'">Quadrado</button>
 			</div>
 			<div class="mainInfo">
 				<div class="visualization">
@@ -19,19 +19,26 @@
 					<canvas id="canvas"></canvas>
 				</div>
 				<div class="inputGroup">
-					<h2 class="subtitle">Rectangle Generator</h2>
+					<h2 class="subtitle">Triangle Generator</h2>
 					<input
-						id="width"
+						id="Numd1"
 						class="numberField"
 						type="number"
-						placeholder="Width"
+						placeholder="Side length 1"
 						min="0.1"
 					/>
 					<input
-						id="height"
+						id="Numd2"
 						class="numberField"
 						type="number"
-						placeholder="Height"
+						placeholder="Side length 2"
+						min="0.1"
+					/>
+                    <input
+						id="Numd3"
+						class="numberField"
+						type="number"
+						placeholder="Side length 3"
 						min="0.1"
 					/>
 					<button id="generateButton" class="button">Generate</button>
