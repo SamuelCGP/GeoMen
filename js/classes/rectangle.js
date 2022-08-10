@@ -28,7 +28,6 @@ export default class Rectangle {
 		ctx.lineTo(x, y);
 		x += this.largura * 10;
 		ctx.lineTo(x, y);
-		console.log(x, y);
 		y -= this.altura * 5;
 		ctx.lineTo(x, y);
 
