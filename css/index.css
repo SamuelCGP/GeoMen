@@ -38,7 +38,7 @@ body {
 #topButton {
   width: 200px;
   position: relative;
-  margin-top: 1%;
+  margin-top: 5%;
 }
 .mainInfo {
   display: flex;
