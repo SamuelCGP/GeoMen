@@ -9,7 +9,12 @@ function generateTriangle() {
 	var d1 = parseFloat(d1Index.value) //armazenando os valores e mudando a proporção pra ficar melhor na figura
     var d2 = parseFloat(d2Index.value)
     var d3 = parseFloat(d3Index.value)
-	if (d1 + d2 <= d3 || d1 + d3 <= d2 || d2 + d3 <= d1) return;
+	if (d1 + d2 <= d3 || d1 + d3 <= d2 || d2 + d3 <= d1) { //Problema da desigualdade 
+        document.getElementById("warning").style.display = 'inline';
+        return
+    } else {
+        document.getElementById("warning").style.display = 'none';
+    }
 	console.log("")
 
 	const areaTag = document.getElementById("areaTag");

@@ -16,7 +16,7 @@ body {
   max-width: 90vw;
   height: calc(50rem);
   max-height: 90vh;
-  background-color: rgba(240, 248, 255, 0.5);
+  background-color: rgba(240, 248, 255, 0.502);
   border-radius: 32px;
 }
 .title {
@@ -83,6 +83,17 @@ body {
 }
 .subtitle {
   text-align: center;
+}
+#warning {
+  display: none;
+  font-size: 24px;
+  text-align: center;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
+  font-style: italic;
+}
+.warningA {
+  font-size: 24px;
+  color: rgb(235, 57, 57);
 }
 .numberField {
   width: calc(100% - 3rem);
