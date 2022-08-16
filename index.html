@@ -9,9 +9,9 @@
 	</head>
 	<body>
 		<div class="container">
-			<div class="top">
+			<div class="top">	
 				<h1 class="title">GeoMen</h1>
-				<button class="button" id="topButton" onclick="window.location.href='triangle.html'">Triângulo</button>
+				<button class="button" id="topButton" onclick="window.location.href='triangle.html'">Triangle</button>
 			</div>
 			<div class="mainInfo">
 				<div class="visualization">
@@ -25,14 +25,24 @@
 						class="numberField"
 						type="number"
 						placeholder="Width"
-						min="0.1"
+						min="1"
+						max="100"
+						oninput="javascript: 
+                        if (parseInt(this.value) > parseInt(this.max)) this.value = 100
+                        else if (parseInt(this.value) < parseInt(this.min)) this.value = 1
+                        "
 					/>
 					<input
 						id="height"
 						class="numberField"
 						type="number"
 						placeholder="Height"
-						min="0.1"
+						min="1"
+						max="100"
+						oninput="javascript: 
+                        if (parseInt(this.value) > parseInt(this.max)) this.value = 100
+                        else if (parseInt(this.value) < parseInt(this.min)) this.value = 1
+                        "
 					/>
 					<button id="generateButton" class="button">Generate</button>
 				</div>

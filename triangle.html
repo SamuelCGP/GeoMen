@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<script type="module" src="js/app2.js" defer></script>
+		<link rel="stylesheet" href="css/index.css" />
 		<link rel="stylesheet" href="css/triangle.css" />
 		<title>GeoMen</title>
 	</head>
@@ -11,7 +12,7 @@
 		<div class="container">
 			<div class="top">
 				<h1 class="title">GeoMen</h1>
-				<button class="button" id="topButton" onclick="window.location.href='index.html'">Quadrado</button>
+				<button class="button" id="topButton" onclick="window.location.href='index.html'">Rectangle</button>
 			</div>
 			<div class="mainInfo">
 				<div class="visualization">
@@ -27,6 +28,11 @@
 						type="number"
 						placeholder="Side length 1"
 						min="0.1"
+						max="100"
+						oninput="javascript: 
+                        if (parseInt(this.value) > parseInt(this.max)) this.value = 100
+                        else if (parseInt(this.value) < parseInt(this.min)) this.value = 1
+                        "
 					/>
 					<input
 						id="Numd2"
@@ -34,6 +40,11 @@
 						type="number"
 						placeholder="Side length 2"
 						min="0.1"
+						max="100"
+						oninput="javascript: 
+                        if (parseInt(this.value) > parseInt(this.max)) this.value = 100
+                        else if (parseInt(this.value) < parseInt(this.min)) this.value = 1
+                        "
 					/>
                     <input
 						id="Numd3"
@@ -41,6 +52,11 @@
 						type="number"
 						placeholder="Side length 3"
 						min="0.1"
+						max="100"
+						oninput="javascript: 
+                        if (parseInt(this.value) > parseInt(this.max)) this.value = 100
+                        else if (parseInt(this.value) < parseInt(this.min)) this.value = 1
+                        "
 					/>
 					<button id="generateButton" class="button">Generate</button>
 				</div>
